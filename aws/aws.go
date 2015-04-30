@@ -39,6 +39,23 @@ type Region struct {
 	Route53Endpoint      string
 }
 
+var eucalyptus = Region{
+	"eucalyptus",
+	"http://compute.emea.eucalyptus.com:8773/",
+	"http://objectstorage.emea.eucalyptus.com:8773/",
+	"",
+	true,
+	true,
+	"",
+	"",
+	"",
+	"https://euare.emea.eucalyptus.com:8773/",
+	"https://loadbalancing.emea.eucalyptus.com:8773/",
+	"https://autoscaling.emea.eucalyptus.com:8773/",
+	"",
+	"",
+}
+
 var USGovWest = Region{
 	"us-gov-west-1",
 	"https://ec2.us-gov-west-1.amazonaws.com",
@@ -238,6 +255,7 @@ var Regions = map[string]Region{
 	SAEast.Name:       SAEast,
 	USGovWest.Name:    USGovWest,
 	CNNorth.Name:      CNNorth,
+        eucalyptus.Name:   eucalyptus,
 }
 
 type Auth struct {
